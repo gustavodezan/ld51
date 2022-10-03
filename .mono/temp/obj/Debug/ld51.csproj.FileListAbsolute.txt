@@ -7,3 +7,12 @@ C:\Users\gusta\OneDrive\Documents\godot_games\ld51\.mono\temp\obj\Debug\ld51.Ass
 C:\Users\gusta\OneDrive\Documents\godot_games\ld51\.mono\temp\obj\Debug\ld51.csproj.CoreCompileInputs.cache
 C:\Users\gusta\OneDrive\Documents\godot_games\ld51\.mono\temp\obj\Debug\ld51.dll
 C:\Users\gusta\OneDrive\Documents\godot_games\ld51\.mono\temp\obj\Debug\ld51.pdb
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\bin\Debug\ld51.dll
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\bin\Debug\ld51.pdb
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.csproj.AssemblyReference.cache
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.AssemblyInfoInputs.cache
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.AssemblyInfo.cs
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.csproj.CoreCompileInputs.cache
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.dll
+C:\Users\Nathalia\Documents\godot\ld51\.mono\temp\obj\Debug\ld51.pdb
