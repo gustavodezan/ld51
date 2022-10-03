@@ -3,11 +3,15 @@ using System;
 
 public class Player : Area2D
 {
+	[Export]
+	public PackedScene ProjectileScene;
+	[Export]
+	public int Speed = 100;
+	
 	[Signal]
 	public delegate void Hit();
 
-	[Export]
-	public int Speed = 100;
+	public bool canShoot = true;
 
 	public Vector2 ScreenSize;
 
@@ -15,11 +19,20 @@ public class Player : Area2D
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
-		// Hide();
 	}
 
 	public override void _Process(float delta)
 	{
+		if (Input.IsActionPressed("shoot") && canShoot)
+		{
+			var projectile = (Projectile)ProjectileScene.Instance();
+			var mouseDirection = GetGlobalMousePosition() - Position;
+			projectile.Shoot(Position, mouseDirection);
+			GetParent().AddChild(projectile);
+			canShoot = false;
+			GetNode<Timer>("ShootTimer").Start();
+		}
+		
 		var velocity = Vector2.Zero;
 
 		if (Input.IsActionPressed("move_right"))
@@ -74,4 +87,18 @@ public class Player : Area2D
 			animatedSprite.Animation = "idle";
 		}
 	}
+	
+	public void Start(Vector2 pos)
+	{
+		Position = pos;
+		Show();
+		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
+	}
+	
+	private void _on_ShootCD_timeout()
+	{
+		canShoot = true;
+	}
 }
+
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite32_idle_strip2.png-aece71e0a929065ad27de2fac02a73e0.stex"
+path="res://.import/shell_attak.png-299f07c7d243960607f9492f06918dd2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/sprite32_idle_strip2.png"
-dest_files=[ "res://.import/sprite32_idle_strip2.png-aece71e0a929065ad27de2fac02a73e0.stex" ]
+source_file="res://assets/shell_attak.png"
+dest_files=[ "res://.import/shell_attak.png-299f07c7d243960607f9492f06918dd2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
