@@ -15,7 +15,6 @@ public class Player : Area2D
 
 	public Vector2 ScreenSize;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
@@ -102,6 +101,3 @@ public class Player : Area2D
 	}
 
 }
-
-
-

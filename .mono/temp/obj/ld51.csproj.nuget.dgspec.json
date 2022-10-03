@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj": {}
+    "C:\\Users\\Nathalia\\Documents\\godot\\ld51\\ld51.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj": {
+    "C:\\Users\\Nathalia\\Documents\\godot\\ld51\\ld51.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj",
+        "projectUniqueName": "C:\\Users\\Nathalia\\Documents\\godot\\ld51\\ld51.csproj",
         "projectName": "ld51",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj",
-        "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\.mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\Nathalia\\Documents\\godot\\ld51\\ld51.csproj",
+        "packagesPath": "C:\\Users\\Nathalia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nathalia\\Documents\\godot\\ld51\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nathalia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,15 +39,7 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "dependencies": {
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.2, )",
-              "autoReferenced": true
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
