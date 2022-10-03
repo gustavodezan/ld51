@@ -192,7 +192,7 @@ animations = [ {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
 "loop": true,
 "name": "shell_attack",
-"speed": 12.0
+"speed": 25.0
 }, {
 "frames": [ SubResource( 30 ) ],
 "loop": true,
@@ -233,7 +233,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 41 )
 animation = "shell_attack"
-frame = 8
+frame = 1
 playing = true
 
 [node name="CollisionLongLegs" type="CollisionShape2D" parent="."]
@@ -246,7 +246,7 @@ visible = false
 position = Vector2( -0.5, 2.5 )
 shape = SubResource( 43 )
 
-[node name="CollisionShellAttack" type="CollisionShape2D" parent="."]
+[node name="CollisionShellAttack" type="CollisionShape2D" parent="." groups=["enemies"]]
 visible = false
 position = Vector2( 0, 1.5 )
 shape = SubResource( 44 )

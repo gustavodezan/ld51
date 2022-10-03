@@ -1,0 +1,9 @@
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\bin\ExportDebug\ld51.dll
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\bin\ExportDebug\ld51.pdb
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.csproj.AssemblyReference.cache
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.AssemblyInfoInputs.cache
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.AssemblyInfo.cs
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.csproj.CoreCompileInputs.cache
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.dll
+C:\Users\gusta\OneDrive\Documents\Gustavo\Programação\game dev\godot\ld51\.mono\temp\obj\ExportDebug\ld51.pdb

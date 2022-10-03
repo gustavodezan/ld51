@@ -13,7 +13,7 @@ public class Player : Area2D
 	public int Damage = 1;
 	
 	[Signal]
-	public delegate void Hit();
+	public delegate void Dead();
 
 	public bool canShoot = true;
 
@@ -95,6 +95,12 @@ public class Player : Area2D
 	{
 		Health -= damage;
 		GD.Print(Health);
+		if (Health <= 0)
+		{
+			Hide();
+			EmitSignal(nameof(Dead));
+		}
+		
 		return true;
 	}
 	

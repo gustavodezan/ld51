@@ -15,7 +15,7 @@ public class Seed : Projectile
 
 	private void OnProjectileAreaEntered(object area)
 	{
-		var enemy = enemy as Enemy;
+		var enemy = area as Enemy;
 		if (enemy != null)
 		{
 			// Player damage

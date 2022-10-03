@@ -12,16 +12,7 @@ BeamScene = ExtResource( 4 )
 Speed = 100
 
 [node name="AnimatedSprite" parent="." index="0"]
-frame = 6
-
-[node name="CollisionLongLegs" parent="." index="1"]
-visible = true
-
-[node name="CollisionShell" parent="." index="2"]
-visible = true
-
-[node name="CollisionShellAttack" parent="." index="3"]
-visible = true
+frame = 4
 
 [node name="WaitTime" type="Timer" parent="." index="4"]
 wait_time = 4.0

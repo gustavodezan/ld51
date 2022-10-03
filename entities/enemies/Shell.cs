@@ -6,9 +6,8 @@ public class Shell : Enemy
 	// 0 = free, 1 = attack
 	public int State = 0;
 	private bool PlayerHurt;
-	public Vector2 ScreenSize;
 	[Export]
-	public int Speed = 150;
+	public int Speed = 200;
 	
 	[Export]
 	public PackedScene PlayerScene;

@@ -121,6 +121,6 @@ shape = SubResource( 15 )
 position = Vector2( 240, 450 )
 
 [node name="ShootTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
