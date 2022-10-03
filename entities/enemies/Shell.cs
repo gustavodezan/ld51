@@ -21,6 +21,8 @@ public class Shell : Enemy
 	
 	public override void _Process(float delta)
 	{
+		GetNode<CollisionShape2D>("CollisionLongLegs").Disabled = true;
+		GetNode<CollisionShape2D>("CollisionShellAttack").Disabled = true;
 		
 		var animSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 		animSprite.Playing = true;
@@ -33,11 +35,16 @@ public class Shell : Enemy
 		if (State != 1 && Math.Abs(Position.x - playerPosition.x) <= 18 && Math.Abs(Position.y - playerPosition.y) <= 18)
 		{
 			animSprite.Animation = "shell_attack";
+			// chage collision shape
+			GetNode<CollisionShape2D>("CollisionShellAttack").Disabled = false;
+			GetNode<CollisionShape2D>("CollisionShell").Disabled = true;
+
 			State = 1;
 			PlayerHurt = false;
 		}
 		if (State == 1)
 		{
+			GetNode<CollisionShape2D>("CollisionShellAttack").Disabled = false;
 			int numFrames = animSprite.Frame;
 			if (numFrames > 4 && numFrames < 13 && !PlayerHurt)
 			{
@@ -56,6 +63,8 @@ public class Shell : Enemy
 		}
 		if (State == 0)
 		{
+			GetNode<CollisionShape2D>("CollisionShellAttack").Disabled = true;
+			GetNode<CollisionShape2D>("CollisionShell").Disabled = false;
 			if (Position.x < playerPosition.x)
 			{
 				velocity.x += 1;

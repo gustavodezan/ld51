@@ -15,14 +15,7 @@ PlayerScene = ExtResource( 3 )
 frame = 12
 playing = false
 
-[node name="CollisionLongLegs" parent="." index="1"]
-visible = true
-
 [node name="CollisionShell" parent="." index="2"]
 visible = true
 
-[node name="CollisionShellAttack" parent="." index="3"]
-visible = true
-
 [connection signal="area_entered" from="." to="." method="_on_Shell_area_entered"]
-

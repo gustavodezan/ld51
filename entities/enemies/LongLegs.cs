@@ -7,7 +7,12 @@ public class LongLegs : Enemy
 	public PackedScene PlayerScene;
 	
 	[Export]
+	public PackedScene BeamScene;
+	
+	[Export]
 	public int Speed = 100;
+	
+	public bool canShoot = false;
 	
 	public int Distance = 128;
 	
@@ -25,7 +30,10 @@ public class LongLegs : Enemy
 	}
 	
 	public override void _Process(float delta)
-	{		
+	{
+		GetNode<CollisionShape2D>("CollisionShellAttack").Disabled = true;
+		GetNode<CollisionShape2D>("CollisionShell").Disabled = true;
+		GetNode<CollisionShape2D>("CollisionLongLegs").Disabled = false;
 		var velocity = Vector2.Zero;
 		var playerPosition = GetNode<Player>("../Player").Position;
 		
@@ -34,9 +42,24 @@ public class LongLegs : Enemy
 			GetNode<Timer>("WaitTime").Start();
 			animSprite.Animation = "long_legs";
 			State = 1;
+			canShoot = true;
+		}
+		if (State == 1)
+		{
+			// State Attack
+			if (canShoot)
+			{
+				var projectile = (Beam)BeamScene.Instance();
+				var direction = playerPosition - Position;
+				projectile.Shoot(Position, direction);
+				GetParent().AddChild(projectile);
+				canShoot = false;
+				GetNode<Timer>("ShotTimer").Start();
+			}
 		}
 		else if (State == 0)
 		{
+			// State Free
 			animSprite.Animation = "long_legs_run";
 			if (Position.x < playerPosition.x)
 			{
@@ -60,7 +83,13 @@ public class LongLegs : Enemy
 		
 	}
 	
+
+	private void OnShotTimerTimeout()
+	{
+		canShoot = true;
+	}
 	
 }
+
 
 

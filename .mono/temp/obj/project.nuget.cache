@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJuYx4g9Si84pL46Zj8Kr6ak/5uCX8u4VUaGjff/KR27dRBvC61yBXnfwW7e0yBIFsEeQmDg2irE+Iu9N9rdZA==",
+  "dgSpecHash": "yV9NhVyDQisshlTF90h6vT2OirxBe2aQ32dbtIZuSvw6gFnKeu4H7Q5rqvqLDqQX+BDEA+whGNYclg18pdCoGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\ld51.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

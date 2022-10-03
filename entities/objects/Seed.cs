@@ -15,12 +15,12 @@ public class Seed : Projectile
 
 	private void OnProjectileAreaEntered(object area)
 	{
-		var shell = area as Shell;
-		if (shell != null)
+		var enemy = enemy as Enemy;
+		if (enemy != null)
 		{
 			// Player damage
 			var playerDamage = GetNode<Player>("../Player").Damage;
-			shell.Hurt(playerDamage);
+			enemy.Hurt(playerDamage);
 			QueueFree();
 		}
 	}
