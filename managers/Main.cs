@@ -5,6 +5,8 @@ public class Main : Node
 {
 	[Export]
 	public PackedScene ProjectileScene;
+	[Export]
+	public PackedScene LongLegsScene;
 	
 	[Export]
 	public PackedScene ShellScene;
@@ -21,6 +23,9 @@ public class Main : Node
 			shell.Position = new Vector2(x:i*32, y:32);
 			AddChild(shell);
 		}
+				
+		var longlegs = (LongLegs)LongLegsScene.Instance();
+		AddChild(longlegs);
 	}
 
 

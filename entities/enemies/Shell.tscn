@@ -25,3 +25,4 @@ visible = true
 visible = true
 
 [connection signal="area_entered" from="." to="." method="_on_Shell_area_entered"]
+
