@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj": {}
+    "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\ld51.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj": {
+    "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\ld51.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj",
+        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\ld51.csproj",
         "projectName": "ld51",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\ld51.csproj",
+        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\ld51.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\godot_games\\temp\\ld51\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\Gustavo\\Programação\\game dev\\godot\\ld51\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config"

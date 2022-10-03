@@ -4,9 +4,13 @@ using System;
 public class Player : Area2D
 {
 	[Export]
-	public PackedScene ProjectileScene;
+	public PackedScene SeedScene;
 	[Export]
-	public int Speed = 100;
+	public int Speed = 150;
+	public int MaxHealth = 10;
+	[Export]
+	public int Health;
+	public int Damage = 1;
 	
 	[Signal]
 	public delegate void Hit();
@@ -25,7 +29,7 @@ public class Player : Area2D
 	{
 		if (Input.IsActionPressed("shoot") && canShoot)
 		{
-			var projectile = (Projectile)ProjectileScene.Instance();
+			var projectile = (Seed)SeedScene.Instance();
 			var mouseDirection = GetGlobalMousePosition() - Position;
 			projectile.Shoot(Position, mouseDirection);
 			GetParent().AddChild(projectile);
@@ -88,13 +92,25 @@ public class Player : Area2D
 		}
 	}
 	
+	public bool Hurt(int damage)
+	{
+		Health -= damage;
+		GD.Print(Health);
+		return true;
+	}
+	
+	public Vector2 GetPlayerPosition()
+	{
+		return Position;
+	}
+	
 	public void Start(Vector2 pos)
 	{
 		Position = pos;
+		Health = MaxHealth;
 		Show();
 		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 	}
-	
 	
 	private void _on_ShootTimer_timeout()
 	{

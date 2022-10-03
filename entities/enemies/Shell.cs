@@ -1,25 +1,24 @@
 using Godot;
 using System;
 
-public class Shell : Area2D
+public class Shell : Enemy
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
-	
+	// 0 = free, 1 = attack
+	public int State = 0;
+	private bool PlayerHurt;
 	public Vector2 ScreenSize;
+	[Export]
+	public int Speed = 150;
 	
 	[Export]
-	public int Speed = 100;
+	public PackedScene PlayerScene;
 
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
 	}
 	
-		public override void _Process(float delta)
+	public override void _Process(float delta)
 	{
 		
 		var animSprite = GetNode<AnimatedSprite>("AnimatedSprite");
@@ -28,32 +27,50 @@ public class Shell : Area2D
 		//mobTypes[0];//mobTypes[GD.Randi() % mobTypes.Length];
 		
 		var velocity = Vector2.Zero;
-		var playerPosition = new Vector2(x: 240, y: 210);//GetNode<Position2D>("res://entities/player/Player/PlayerPosition");
-		
-		if (Math.Abs(Position.x - playerPosition.x) <= 32 && Math.Abs(Position.y - playerPosition.y) <= 32)
+		var playerPosition = GetNode<Player>("../Player").Position;
+		//var playerPosition = new Vector2(x: 240, y: 210);//GetNode<Position2D>("res://entities/player/Player/PlayerPosition");
+		if (State != 1 && Math.Abs(Position.x - playerPosition.x) <= 18 && Math.Abs(Position.y - playerPosition.y) <= 18)
 		{
 			animSprite.Animation = "shell_attack";
+			State = 1;
+			PlayerHurt = false;
 		}
-		else
+		if (State == 1)
 		{
-			animSprite.Animation = "shell_run";
+			int numFrames = animSprite.Frame;
+			if (numFrames > 4 && numFrames < 13 && !PlayerHurt)
+			{
+				var player = GetNode<Player>("../Player");
+				// check if player is in the shell's attack range
+				if (!PlayerHurt && (Math.Abs(Position.x - playerPosition.x) <= 18 && Math.Abs(Position.y - playerPosition.y) <= 18))
+				{
+					PlayerHurt = true;
+					player.Hurt(1);
+				}
+			}
+			if (numFrames >= 13)
+			{
+				State = 0;
+			}
 		}
-		
-		if (Position.x < playerPosition.x)
+		if (State == 0)
 		{
-			velocity.x += 1;
-		}
-		if (Position.x > playerPosition.x)
-		{
-			velocity.x -= 1;
-		}
-		if (Position.y < playerPosition.y)
-		{
-			velocity.y += 1;
-		}
-		if (Position.y > playerPosition.y)
-		{
-			velocity.y -= 1;
+			if (Position.x < playerPosition.x)
+			{
+				velocity.x += 1;
+			}
+			if (Position.x > playerPosition.x)
+			{
+				velocity.x -= 1;
+			}
+			if (Position.y < playerPosition.y)
+			{
+				velocity.y += 1;
+			}
+			if (Position.y > playerPosition.y)
+			{
+				velocity.y -= 1;
+			}
 		}
 		
 		// var animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
@@ -68,11 +85,30 @@ public class Shell : Area2D
 			y: Mathf.Clamp(Position.y, 0, ScreenSize.y)
 		);
 		
+		if (velocity.x != 0)
+		{
+			animSprite.Animation = "shell_run";
+			animSprite.FlipV = false;
+			animSprite.FlipH = velocity.x < 0;
+		}
+		else if (velocity.y != 0)
+		{
+			animSprite.Animation = "shell_run";
+		}
+		else
+		{
+			animSprite.Animation = "shell_attack";
+		}
+		
 	}
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+	private void _on_Shell_area_entered(object area)
+	{
+		GD.Print(area);
+	}
+
+
 }
+
+
+
