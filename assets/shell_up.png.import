@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<<< HEAD:assets/shell_up.png.import
 path="res://.import/shell_up.png-63c4ed5158d5a6a56c37650bf5aa4a2b.stex"
-========
-path="res://.import/projectile.png-197bcbc76cb11b0c658014dfea4806d1.stex"
->>>>>>>> player:assets/projectile.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/shell_up.png.import
 source_file="res://assets/shell_up.png"
 dest_files=[ "res://.import/shell_up.png-63c4ed5158d5a6a56c37650bf5aa4a2b.stex" ]
-========
-source_file="res://assets/projectile.png"
-dest_files=[ "res://.import/projectile.png-197bcbc76cb11b0c658014dfea4806d1.stex" ]
->>>>>>>> player:assets/projectile.png.import
 
 [params]
 
@@ -29,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

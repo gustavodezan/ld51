@@ -95,10 +95,13 @@ public class Player : Area2D
 		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 	}
 	
-	private void _on_ShootCD_timeout()
+	
+	private void _on_ShootTimer_timeout()
 	{
 		canShoot = true;
 	}
+
 }
+
 
 

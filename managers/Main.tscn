@@ -9,6 +9,7 @@ script = ExtResource( 2 )
 ProjectileScene = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+ProjectileScene = null
 
 [node name="StartPosition" type="Position2D" parent="."]
 position = Vector2( 340, 210 )
