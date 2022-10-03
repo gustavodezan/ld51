@@ -1,15 +1,11 @@
-[gd_scene load_steps=2 format=2]
-
-[sub_resource type="CSharpScript" id=1]
-resource_name = "Enemy"
-script/source = "using Godot;
+using Godot;
 using System;
 
-public class Enemy : Area2D
+public class LongLegs : Enemy
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
-	// private string b = \"text\";
+	// private string b = "text";
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -23,7 +19,3 @@ public class Enemy : Area2D
 //      
 //  }
 }
-"
-
-[node name="Enemy" type="Area2D"]
-script = SubResource( 1 )
