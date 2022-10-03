@@ -1,1 +1,1 @@
-{"res://entities/player/Player.cs":{"modified_time":"1664734006","class":{"namespace":"","class_name":"Player","nested":false}}}
+{"res://entities/player/Player.cs":{"modified_time":"1664734006","class":{"namespace":"","class_name":"Player","nested":false}},"res://entities/objects/Projectile.cs":{"modified_time":"1664756216","class":{"namespace":"","class_name":"Projectile","nested":false}}}
