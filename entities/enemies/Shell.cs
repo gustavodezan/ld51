@@ -17,16 +17,27 @@ public class Shell : Area2D
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
-		var animSprite = GetNode<AnimatedSprite>("AnimatedSprite");
-		animSprite.Playing = true;
-		string[] mobTypes = animSprite.Frames.GetAnimationNames();
-		animSprite.Animation = mobTypes[0];//mobTypes[GD.Randi() % mobTypes.Length];
 	}
 	
 		public override void _Process(float delta)
 	{
+		
+		var animSprite = GetNode<AnimatedSprite>("AnimatedSprite");
+		animSprite.Playing = true;
+		// string[] mobTypes = animSprite.Frames.GetAnimationNames();
+		//mobTypes[0];//mobTypes[GD.Randi() % mobTypes.Length];
+		
 		var velocity = Vector2.Zero;
 		var playerPosition = new Vector2(x: 240, y: 210);//GetNode<Position2D>("res://entities/player/Player/PlayerPosition");
+		
+		if (Math.Abs(Position.x - playerPosition.x) <= 32 && Math.Abs(Position.y - playerPosition.y) <= 32)
+		{
+			animSprite.Animation = "shell_attack";
+		}
+		else
+		{
+			animSprite.Animation = "shell_run";
+		}
 		
 		if (Position.x < playerPosition.x)
 		{
